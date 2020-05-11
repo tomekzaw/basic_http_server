@@ -1,4 +1,5 @@
 import os
+import sys
 import socket
 from time import sleep
 from threading import Thread
@@ -42,11 +43,8 @@ def handle_request(clientsocket, clientaddress):
 
 
 if __name__ == '__main__':
-    # ip, port = '0.0.0.0', 80
-    # ip, port = '127.0.0.1', 80
-    # ip, port = '127.0.0.1', 5000
-    ip = '0.0.0.0'
-    port = int(os.environ['PORT'])
+    ip = sys.argv[1] if len(sys.argv) >= 2 else '127.0.0.1'
+    port = int(sys.argv[2] if len(sys.argv) >= 3 else os.environ.get('PORT', 5000))
 
     print('Python HTTP Server\nPress Ctrl+C to exit')
 
