@@ -46,7 +46,7 @@ if __name__ == '__main__':
     # ip, port = '127.0.0.1', 80
     # ip, port = '127.0.0.1', 5000
     ip = '0.0.0.0'
-    port = os.environ['PORT']
+    port = int(os.environ['PORT'])
 
     print('Python HTTP Server\nPress Ctrl+C to exit')
 
