@@ -43,7 +43,8 @@ def handle_request(clientsocket, clientaddress):
 if __name__ == '__main__':
     # ip, port = '0.0.0.0', 80
     # ip, port = '127.0.0.1', 80
-    ip, port = '127.0.0.1', 5000
+    # ip, port = '127.0.0.1', 5000
+    ip, port = '0.0.0.0', 5000
 
     print('Python HTTP Server\nPress Ctrl+C to exit')
 
