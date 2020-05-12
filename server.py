@@ -33,7 +33,7 @@ def handle_request(clientsocket, clientaddress):
     headers = [
         b'HTTP/1.1 200 OK',
         b'Content-Type: text/plain',
-        b'X-Secret-Message: Hello world!',
+        b'X-Secret-Message: Hola amigos!',
     ]
     body = f'Hello world! Current time is {datetime.now()}.'.encode()
 
